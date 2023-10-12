@@ -23,4 +23,25 @@ final class Main
 
         return $isNarcissistic;
     }
+
+    public static function getOutlier(array $numbers): int|bool
+    {
+        $oddNumbers = array_values(array_filter($numbers, function (int $number) {
+            return $number % 2 === 1;
+        }));
+
+        $evenNumbers = array_values(array_filter($numbers, function (int $number) {
+            return $number % 2 === 0;
+        }));
+
+        if (count($oddNumbers) === 1) {
+            return $oddNumbers[0];
+        }
+
+        if (count($evenNumbers) === 1) {
+            return $evenNumbers[0];
+        }
+
+        return false;
+    }
 }
