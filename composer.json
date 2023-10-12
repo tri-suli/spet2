@@ -1,0 +1,26 @@
+{
+    "name": "spe/test-2",
+    "description": "SPE second test",
+    "type": "phpunit",
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spe\\Test2\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tri",
+            "email": "trisulipras@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit ./tests"
+        ]
+    },
+    "require": {}
+}
