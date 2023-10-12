@@ -44,4 +44,15 @@ final class Main
 
         return false;
     }
+
+    public static function findNeedle(array $haystack, string $needle): int
+    {
+        foreach ($haystack as $index => $word) {
+            if ($needle === $word) {
+                return $index;
+            }
+        }
+
+        return -1;
+    }
 }
