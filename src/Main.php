@@ -55,4 +55,11 @@ final class Main
 
         return -1;
     }
+
+    public static function blueOcean(array $numbers, array $operators): array
+    {
+        return array_values(array_filter($numbers, function (int $number) use ($operators) {
+            return !in_array($number, $operators);
+        }));
+    }
 }
